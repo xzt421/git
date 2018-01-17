@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" />
+		<title>index</title>
+		<script type="text/javascript">
+			document.querySelector("html").style.fontSize = window.innerWidth / 15 + 'px';
+		</script>
+		<script src="js/jquery-3.2.1.min.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">
+			$(function() {
+				var n = 0;
+				setInterval(function() {
+					n >= 7 ? n = 0 : n++;
+					$(".imgs li").eq(n).fadeIn(1000).siblings().fadeOut(1000);
+					$(".point li").eq(n).addClass("cp").siblings().removeClass("cp");
+				}, 3000)
+
+				$("footer li").on("click", function() {
+					$(this).addClass("checked").siblings().removeClass("checked");
+				})
+				setInterval(function() {
+					var w = window.outerWidth,
+						h = window.outerHeight;
+					var initWidth = window.innerHeight;
+					if(window.outerWidth == h) {
+						document.querySelector("html").style.fontSize = window.innerHeight / 15 + 'px';
+					} else {
+						document.querySelector("html").style.fontSize = window.innerWidth / 15 + 'px';
+					}
+				}, 100)
+			})
+		</script>
+		<link rel="stylesheet" type="text/css" href="css/reset.css" />
+		<!--引入阿里矢量图-->
+		<link rel="stylesheet" type="text/css" href="font/demo.css" />
+		<link rel="stylesheet" type="text/css" href="font/iconfont.css" />
+
+		<link rel="stylesheet" type="text/css" href="css/index.css" />
+	</head>
+
+	<body>
+		<header>
+			<div class="sao">
+				<i class="icon iconfont icon-saoyisao"></i>
+				<div class="name">扫一扫</div>
+			</div>
+			<div class="search">
+				<i class="icon iconfont icon-sousuo"></i>
+			</div>
+			<input type="text" name="" id="" placeholder="星巴克咖啡" />
+			<div class="camera">
+				<i class="icon iconfont icon-xiangji"></i>
+			</div>
+			<div class="massage">
+				<i class="icon iconfont icon-xiaoxi"></i>
+				<div class="name">消息</div>
+			</div>
+		</header>
+		<main>
+			<div class="banner">
+				<ul class="imgs">
+					<li class="img1 cd"></li>
+					<li class="img2"></li>
+					<li class="img3"></li>
+					<li class="img4"></li>
+					<li class="img5"></li>
+					<li class="img6"></li>
+					<li class="img7"></li>
+					<li class="img8"></li>
+				</ul>
+				<ul class="point">
+					<li class="cp"></li>
+					<li></li>
+					<li></li>
+					<li></li>
+					<li></li>
+					<li></li>
+					<li></li>
+					<li></li>
+				</ul>
+			</div>
+			<ul class="nav">
+				<li>
+					<a href="##"><span class="navLogo0"></span>天猫</a>
+				</li>
+				<li>
+					<a href="##"><span class="navLogo1"></span>聚划算</a>
+				</li>
+				<li>
+					<a href="##"><span class="navLogo2"></span>天猫国际</a>
+				</li>
+				<li>
+					<a href="##"><span class="navLogo3"></span>外卖</a>
+				</li>
+				<li>
+					<a href="##"><span class="navLogo4"></span>天猫超市</a>
+				</li>
+			</ul>
+			<ul class="nav">
+				<li>
+					<a href="##"><span class="navLogo5"></span>充值中心</a>
+				</li>
+				<li>
+					<a href="##"><span class="navLogo6"></span>飞猪旅行</a>
+				</li>
+				<li>
+					<a href="##"><span class="navLogo7"></span>领金币</a>
+				</li>
+				<li>
+					<a href="##"><span class="navLogo8"></span>到家</a>
+				</li>
+				<li>
+					<a href="##"><span class="navLogo9"></span>分类</a>
+				</li>
+			</ul>
+		</main>
+		<footer>
+			<ul>
+				<li class="checked">
+					<i class="icon iconfont icon-shouye"></i>
+					<div class="name">首页</div>
+				</li>
+				<li>
+					<i class="icon iconfont icon-weitao"></i>
+					<div class="name">微淘</div>
+				</li>
+				<li>
+					<i class="icon iconfont icon-shequ"></i>
+					<div class="name">社区</div>
+				</li>
+				<li>
+					<i class="icon iconfont icon-daohanggouwuche"></i>
+					<div class="name">购物车</div>
+				</li>
+				<li>
+					<i class="icon iconfont icon-geren10"></i>
+					<div class="name">我的淘宝</div>
+				</li>
+			</ul>
+		</footer>
+	</body>
+
+</html>
